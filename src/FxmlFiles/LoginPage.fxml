@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="810.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="812.0" style="-fx-background-color: white;">
+         <children>
+            <Text fx:id="errorMessage" fill="RED" layoutX="194.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="169.0" />
+            <Pane layoutX="456.0" layoutY="34.0" prefHeight="533.0" prefWidth="328.0" style="-fx-background-color: #152733; -fx-background-radius: 0 20 20 0; -fx-opacity: 1;">
+               <children>
+                  <ImageView fitHeight="119.0" fitWidth="200.0" layoutX="64.0" layoutY="207.0">
+                     <image>
+                        <Image url="@../images/realbank.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <InnerShadow radius="31.25" width="106.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="61.0" layoutY="64.0" prefHeight="472.0" prefWidth="406.0" style="-fx-border-style: solid hidden solid solid; -fx-border-width: 1; -fx-border-radius: 15;">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="34.0" layoutY="169.0">
+                     <image>
+                        <Image url="@../images/realusericon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="34.0" layoutY="259.0">
+                     <image>
+                        <Image url="@../images/realpass.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="username" layoutX="104.0" layoutY="174.0" prefHeight="35.0" prefWidth="233.0" promptText="Username" />
+                  <PasswordField fx:id="password" layoutX="103.0" layoutY="264.0" prefHeight="35.0" prefWidth="233.0" promptText="Password" />
+                  <Button fx:id="submit" layoutX="143.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resetButton" layoutX="144.0" layoutY="407.0" mnemonicParsing="false" onAction="#switchToResetPass" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" text=" Reset Password" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

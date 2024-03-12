@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settingscontroller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152733" height="515.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Button fx:id="changepass" layoutX="328.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchToChangePass" style="-fx-border-radius: 15; -fx-background-color: white;" text="Change Password">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="ViewLimit" layoutX="328.0" layoutY="344.0" mnemonicParsing="false" onAction="#switchToSceneViewLimit" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: white; -fx-border-radius: 15;" text="Change Limits">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0" layoutX="6.0">
+         <image>
+            <Image url="@../images/altbank.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="exit1" layoutX="599.0" layoutY="25.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="transferback" layoutX="699.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

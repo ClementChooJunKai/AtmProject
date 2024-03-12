@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transactions">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="transfereeName" layoutX="213.0" layoutY="84.0" />
+            <TextField fx:id="transferFromSOC" layoutX="213.0" layoutY="149.0" />
+            <TextField fx:id="transferToSOC" layoutX="213.0" layoutY="200.0" />
+            <TextField fx:id="transferRemarks" layoutX="213.0" layoutY="275.0" />
+            <Button fx:id="submitTransfer" layoutX="259.0" layoutY="312.0" mnemonicParsing="false" onAction="#Transfer" text="Submit" />
+            <Text layoutX="59.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="transferee username" wrappingWidth="116.0625" />
+            <Text layoutX="71.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter remarks " />
+            <Text layoutX="39.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="trasnfer to current or savings " />
+            <Text layoutX="27.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="transfer from Savings or Current? " />
+            <TextField fx:id="transferAmount" layoutX="213.0" layoutY="234.0" />
+            <Text layoutX="78.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" />
+            <Button fx:id="transferback" layoutX="475.0" layoutY="337.0" mnemonicParsing="false" onAction="#switchToMainScene" text="Back" />
+         </children></AnchorPane>
+   </children>
+</VBox>

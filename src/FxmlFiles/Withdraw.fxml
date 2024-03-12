@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transactions">
+   <children>
+      <AnchorPane prefHeight="602.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152733" height="515.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+            <Pane layoutX="185.0" layoutY="155.0" prefHeight="376.0" prefWidth="431.0" style="-fx-background-color: #152733; -fx-background-radius: 15; -fx-opacity: 1; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 4;">
+               <children>
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="64.0" prefWidth="171.0" text="Withdraw" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="78.0" text="Fill in the data below" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="submitWithdraw" layoutX="26.0" layoutY="307.0" mnemonicParsing="false" onAction="#withdraw" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-radius: 15;" text="Submit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="withdrawAmount" layoutX="27.0" layoutY="120.0" prefHeight="31.0" prefWidth="377.0" promptText="Amount">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#fffdfd" layoutX="26.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Withdraw From:" wrappingWidth="137.13671875">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="WithdrawToSav" layoutX="26.0" layoutY="220.0" mnemonicParsing="false" onAction="#getWithdrawOption" text="Savings" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="WithdrawOption" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="WithdrawToCurr" layoutX="133.0" layoutY="220.0" mnemonicParsing="false" onAction="#getWithdrawOption" text="Current" textFill="WHITE" toggleGroup="$WithdrawOption">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="202.0" layoutY="23.0">
+                     <image>
+                        <Image url="@../images/withdraw.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="errorlbl2" layoutX="24.0" layoutY="267.0" prefHeight="17.0" prefWidth="278.0" textFill="RED" />
+               </children>
+            </Pane>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0" layoutY="-3.0">
+               <image>
+                  <Image url="@../images/altbank.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit1" layoutX="570.0" layoutY="27.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="transferback1" layoutX="672.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</VBox>

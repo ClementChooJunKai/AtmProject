@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transactions">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152733" height="515.0" layoutX="-1.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="802.0">
+               <effect>
+                  <InnerShadow height="61.8" radius="14.95" width="0.0" />
+               </effect>
+            </Rectangle>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0" layoutY="-4.0">
+               <image>
+                  <Image url="@../images/altbank.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit1" layoutX="569.0" layoutY="30.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="transferback1" layoutX="673.0" layoutY="30.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Pane layoutX="185.0" layoutY="129.0" prefHeight="427.0" prefWidth="431.0" style="-fx-background-color: #152733; -fx-background-radius: 15; -fx-opacity: 1; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 4;">
+               <children>
+                  <Label fx:id="transferlbl" layoutX="26.0" layoutY="368.0" prefHeight="33.0" prefWidth="350.0" />
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="64.0" prefWidth="148.0" text="Deposit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="78.0" text="Fill in the data below" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="depositAmt" layoutX="26.0" layoutY="112.0" prefHeight="31.0" prefWidth="377.0" promptText="Amount" />
+                  <RadioButton fx:id="DepositToSav" layoutX="26.0" layoutY="283.0" mnemonicParsing="false" onAction="#getDepositOption" prefHeight="17.0" prefWidth="82.0" text="Savings" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="DepositChoice" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="DepositToCurr" layoutX="123.0" layoutY="283.0" mnemonicParsing="false" onAction="#getDepositOption" prefHeight="17.0" prefWidth="102.0" text="Current" textFill="WHITE" toggleGroup="$DepositChoice">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <Label fx:id="errorlbl" layoutX="26.0" layoutY="318.0" prefHeight="25.0" prefWidth="377.0" textFill="RED" />
+                  <TextField fx:id="depositremark" layoutX="26.0" layoutY="150.0" prefHeight="31.0" prefWidth="377.0" promptText="Remarks" />
+                  <Text fill="WHITE" layoutX="25.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desposit to:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="depositCheqNo" layoutX="26.0" layoutY="187.0" prefHeight="31.0" prefWidth="377.0" promptText="CheqNo" />
+                  <Button fx:id="DepositSubmit" layoutX="25.0" layoutY="353.0" mnemonicParsing="false" onAction="#Deposit" prefHeight="24.0" prefWidth="104.0" style="-fx-background-color: white; -fx-border-radius: 15;" text="Submit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="174.0" layoutY="25.0">
+                     <image>
+                        <Image url="@../images/deposit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+   </children>
+</VBox>

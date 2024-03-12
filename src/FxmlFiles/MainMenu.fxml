@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="usermenuController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="14.0" layoutY="97.0" prefHeight="468.0" prefWidth="298.0" style="-fx-background-color: #152733; -fx-background-radius: 15;">
+               <children>
+                  <Label fx:id="welcome" layoutX="17.0" layoutY="50.0" prefHeight="27.0" prefWidth="249.0" text="welcome dog" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="bankname" fill="#152733" layoutX="17.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" wrappingWidth="249.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <InnerShadow height="100.0" radius="49.5" width="100.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="361.0" prefHeight="169.0" prefWidth="249.0" style="-fx-background-radius: 15; -fx-border-color: white; -fx-border-radius: 15;">
+               <children>
+                  <Text fx:id="balancesaving1" fill="WHITE" layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Savings Balance:" wrappingWidth="268.13671875">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="balancecurrent" fill="WHITE" layoutX="10.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BalanceCurrent" wrappingWidth="262.13671875">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="accountnosavings" fill="WHITE" layoutX="106.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="92.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="10.0" layoutY="96.0" text="Acct. No:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="transactionhistory" alignment="CENTER" layoutX="338.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToSceneTransactionHistory" prefHeight="169.0" prefWidth="212.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Button>
+            <Button fx:id="deposit" alignment="CENTER" layoutX="338.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchToSceneDeposit" prefHeight="169.0" prefWidth="212.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Button>
+            <Button fx:id="withdraw" alignment="CENTER" layoutX="568.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchToSceneWithdraw" prefHeight="169.0" prefWidth="212.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Button>
+            <Button fx:id="transfer" alignment="CENTER" layoutX="568.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToSceneTransfer" prefHeight="169.0" prefWidth="212.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font></Button>
+            <Button fx:id="settings" alignment="CENTER" layoutX="336.0" layoutY="509.0" mnemonicParsing="false" onAction="#switchToSettings" prefHeight="56.0" prefWidth="445.0" style="-fx-background-color: #152733; -fx-background-radius: 15;" text="More Services" textAlignment="CENTER" textFill="#e8eaec">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+            <Pane prefHeight="68.0" prefWidth="800.0" style="-fx-border-width: 3; -fx-border-style: hidden hidden solid hidden; -fx-border-color: #152733; -fx-background-color: white;" styleClass="bord">
+               <children>
+                  <Button fx:id="exit" layoutX="669.0" layoutY="24.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0" layoutX="-1.0" layoutY="-5.0">
+                     <image>
+                        <Image url="@../images/altbank.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="68.0" fitWidth="80.0" layoutX="634.0" layoutY="134.0">
+               <image>
+                  <Image url="@../images/Transfer.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="30.0" layoutY="191.0" prefHeight="158.0" prefWidth="249.0" style="-fx-background-radius: 20; -fx-background-color: #152733; -fx-border-radius: 15; -fx-border-width: 1; -fx-border-color: white;">
+               <children>
+                  <Text fx:id="balancesaving11" fill="WHITE" layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance:" wrappingWidth="268.13671875">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="balancesaving" fill="WHITE" layoutX="10.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BalanceSavings" wrappingWidth="268.13671875">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="10.0" layoutY="96.0" text="Acct. No:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="accountnocurrent" fill="WHITE" layoutX="106.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="92.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Label layoutX="640.0" layoutY="214.0" prefHeight="36.0" prefWidth="68.0" text="Transfer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="626.0" layoutY="321.0">
+               <image>
+                  <Image url="@../images/withdraw.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="634.0" layoutY="412.0" prefHeight="36.0" prefWidth="80.0" text="Withdraw" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="88.0" fitWidth="96.0" layoutX="396.0" layoutY="124.0">
+               <image>
+                  <Image url="@../images/transaction.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="394.0" layoutY="320.0">
+               <image>
+                  <Image url="@../images/deposit.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="363.0" layoutY="214.0" prefHeight="36.0" prefWidth="162.0" text="Transaction History" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="410.0" layoutY="413.0" prefHeight="36.0" prefWidth="68.0" text="Deposit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

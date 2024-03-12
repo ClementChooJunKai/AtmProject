@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateLimits">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152733" height="515.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+            <Pane layoutX="185.0" layoutY="134.0" prefHeight="427.0" prefWidth="431.0" style="-fx-background-color: #152733; -fx-background-radius: 15; -fx-opacity: 1; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 4;">
+               <children>
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="64.0" prefWidth="227.0" text="Change Limit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="182.0" text="Fill in the data below" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="90.0" prefHeight="26.0" prefWidth="158.0" text="Daily Withdraw Limit: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="Withdrawlimit" fill="WHITE" layoutX="200.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="173.13671875">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="25.0" layoutY="127.0" prefHeight="21.0" prefWidth="150.0" text="Daily Transfer Limit: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="TransferLimit" fill="WHITE" layoutX="200.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="173.13671875">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="submitwithdraw" layoutX="27.0" layoutY="214.0" prefHeight="31.0" prefWidth="377.0" promptText="New Withdraw Limit" />
+                  <TextField fx:id="submittransfer" layoutX="27.0" layoutY="265.0" prefHeight="31.0" prefWidth="377.0" promptText="New Transfer Limit" />
+                  <Button fx:id="UpdateLimitsbutton" layoutX="27.0" layoutY="358.0" mnemonicParsing="false" onAction="#updatelimits" prefHeight="24.0" prefWidth="104.0" style="-fx-background-color: white; -fx-border-radius: 15;" text="Submit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="limiterror" layoutX="27.0" layoutY="312.0" prefHeight="26.0" prefWidth="296.0" textFill="RED" />
+               </children>
+            </Pane>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0" layoutX="-4.0" layoutY="1.0">
+               <image>
+                  <Image url="@../images/altbank.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit1" layoutX="563.0" layoutY="29.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="transferback1" layoutX="673.0" layoutY="29.0" mnemonicParsing="false" onAction="#backtosettings" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</VBox>

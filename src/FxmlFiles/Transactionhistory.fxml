@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="transactionhistorycontroller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152733" height="515.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <TableView fx:id="TransHistoryView" layoutX="21.0" layoutY="154.0" prefHeight="425.0" prefWidth="758.0">
+        <columns>
+            <TableColumn fx:id="TransactionNo" prefWidth="75.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="TransNo" />
+          <TableColumn fx:id="UserID" prefWidth="75.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="User ID" />
+          <TableColumn fx:id="Remarks" prefWidth="75.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="Remarks" />
+            <TableColumn fx:id="CheqNo" prefWidth="61.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="CheqNo" />
+            <TableColumn fx:id="Date" prefWidth="69.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="Date" />
+            <TableColumn fx:id="Type" prefWidth="70.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="Type" />
+            <TableColumn fx:id="From" prefWidth="73.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="From" />
+            <TableColumn fx:id="To" prefWidth="71.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="To" />
+            <TableColumn fx:id="Amount" prefWidth="71.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="Amount" />
+            <TableColumn fx:id="AccountType" prefWidth="117.0" style="-fx-background-color: white; -fx-border-style: hidden solid solid hidden;" text="AccountType" />
+        </columns>
+      </TableView>
+      <Label layoutX="25.0" layoutY="116.0" text="Search Transaction History :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="filertrans" layoutX="235.0" layoutY="114.0" prefHeight="25.0" prefWidth="182.0" />
+      <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0">
+         <image>
+            <Image url="@../images/altbank.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="exit1" layoutX="567.0" layoutY="25.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="transferback1" layoutX="677.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="677.0" layoutY="111.0" mnemonicParsing="false" onAction="#saveToTextFile" style="-fx-background-color: white; -fx-background-radius: 30;" text="Save as TXT" textFill="#152733">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="567.0" layoutY="111.0" mnemonicParsing="false" onAction="#saveToCSV" style="-fx-background-color: white; -fx-background-radius: 30;" text="Save as CSV" textFill="#152733">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

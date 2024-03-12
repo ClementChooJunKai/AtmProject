@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transactions">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="802.0" style="-fx-background-color: white;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#152733" height="515.0" layoutY="91.0" stroke="BLACK" strokeType="INSIDE" width="802.0">
+               <effect>
+                  <InnerShadow height="123.59" radius="30.3975" width="0.0" />
+               </effect>
+            </Rectangle>
+            <Pane layoutX="186.0" layoutY="103.0" prefHeight="484.0" prefWidth="431.0" style="-fx-background-color: #152733; -fx-background-radius: 15; -fx-opacity: 1; -fx-border-color: white; -fx-border-radius: 15; -fx-border-width: 4;">
+               <children>
+                  <Button fx:id="submitTransfer" layoutX="25.0" layoutY="408.0" mnemonicParsing="false" onAction="#Transfer" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: white; -fx-border-radius: 15;" text="Submit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="transferAmount" layoutX="26.0" layoutY="151.0" prefHeight="31.0" prefWidth="377.0" promptText="Amount">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="transfereeName" layoutX="25.0" layoutY="110.0" prefHeight="31.0" prefWidth="377.0" promptText="Transferee Username">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="transferlbl" layoutX="26.0" layoutY="368.0" prefHeight="33.0" prefWidth="350.0" textFill="RED" />
+                  <TextField fx:id="transferRemarks" layoutX="26.0" layoutY="191.0" prefHeight="31.0" prefWidth="377.0" promptText="Remarks">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <RadioButton fx:id="TransferToSav" layoutX="23.0" layoutY="339.0" mnemonicParsing="false" onAction="#getTransferToChoice" text="Savings" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ToChoice" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="TransferToCurr" layoutX="138.0" layoutY="339.0" mnemonicParsing="false" onAction="#getTransferToChoice" text="Current" textFill="WHITE" toggleGroup="$ToChoice">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="TransferFromSav" layoutX="23.0" layoutY="274.0" mnemonicParsing="false" onAction="#getTransferFromChoice" text="Savings" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="FromChoice" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="TransferFromCurr" layoutX="138.0" layoutY="274.0" mnemonicParsing="false" onAction="#getTransferFromChoice" text="Current" textFill="WHITE" toggleGroup="$FromChoice">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <Text fill="WHITE" layoutX="25.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfer from:" wrappingWidth="104.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="25.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfer to:" wrappingWidth="92.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="174.0" layoutY="31.0">
+                     <image>
+                        <Image url="@../images/Transfer.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="64.0" prefWidth="148.0" text="Transfer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="78.0" text="Fill in the data below" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView blendMode="SRC_ATOP" cache="true" fitHeight="88.0" fitWidth="123.0">
+               <image>
+                  <Image url="@../images/altbank.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit1" layoutX="593.0" layoutY="25.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="92.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="transferback" layoutX="693.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchToMainScene" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #152733; -fx-background-radius: 30;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <Pane prefHeight="0.0" prefWidth="801.0" style="-fx-background-color: white; -fx-opacity: 0.5;" />
+   </children>
+</VBox>

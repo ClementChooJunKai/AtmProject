@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateLimits">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="87.0" layoutY="67.0" prefHeight="26.0" prefWidth="117.0" text="Daily Withdraw Limit: " />
+            <Label layoutX="96.0" layoutY="103.0" text="Daily Transfer Limit: " />
+            <Text fx:id="Withdrawlimit" layoutX="213.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="173.13671875" />
+            <Text fx:id="TransferLimit" layoutX="213.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="173.13671875" />
+            <TextField fx:id="submitwithdraw" layoutX="213.0" layoutY="238.0" />
+            <TextField fx:id="submittransfer" layoutX="213.0" layoutY="285.0" />
+            <Button fx:id="UpdateLimitsbutton" layoutX="250.0" layoutY="336.0" mnemonicParsing="false" onAction="#updatelimits" prefHeight="25.0" prefWidth="75.0" text="Button" />
+            <Text layoutX="91.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Withdraw Limit:" />
+            <Text layoutX="99.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Transfer Limit:" />
+            <Button fx:id="backtoMain" layoutX="460.0" layoutY="336.0" mnemonicParsing="false" onAction="#backtoMain" text="Back" />
+         </children></AnchorPane>
+   </children>
+</VBox>
